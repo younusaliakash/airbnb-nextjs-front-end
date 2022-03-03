@@ -1,0 +1,64 @@
+.discover {
+  .discover_container {
+    width: 80%;
+    margin: 0 auto;
+    .container_wrapper {
+      .container_title {
+        h1 {
+          font-size: 33px;
+          line-height: 37px;
+          font-weight: 600;
+          color: #222222;
+        }
+      }
+      .main_container {
+        margin-top: 45px;
+        .discover_box_wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 30px;
+          .discover_card {
+            .card_wrapper {
+              width: 100%;
+              position: relative;
+              .card_thumbnail {
+                img {
+                  border-radius: 10px;
+                  width: 100%;
+                }
+              }
+              .discover_info {
+                position: absolute;
+                top: 40px;
+                left: 35px;
+                width: 280px;
+                h2 {
+                  font-size: 41px;
+                  line-height: 46px;
+                  font-weight: 600;
+                  color: #fff;
+                }
+              }
+              .btn_container {
+                margin-top: 20px;
+                button {
+                  text-align: center;
+                  outline: none;
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                  background: #fff;
+                  color: #222222;
+                  font-size: 16px;
+                  line-height: 20px;
+                  font-weight: 600;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

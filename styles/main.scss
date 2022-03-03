@@ -1,0 +1,11 @@
+@import "./global/global";
+@import "./global/reset";
+@import "./abstracts/veriables";
+@import "./responsive/breakpoints";
+
+//components
+@import "./components/custom/homeNewsContainer";
+@import "./components/custom/homeHero";
+@import "./components/custom/discover";
+
+//pages
