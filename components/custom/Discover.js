@@ -2,7 +2,7 @@ import React from "react";
 import { urlFor } from "../../sanity";
 
 const Discover = ({ discover }) => {
-  console.log(discover);
+//   console.log(discover);
   return (
     <>
       {discover ? (

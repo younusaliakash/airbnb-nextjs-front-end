@@ -1,12 +1,15 @@
+import Header from "../components/common/Header"
 import Discover from "../components/custom/discover"
+import HomeBottomBanner from "../components/custom/HomeBottomBanner"
 import HomeHero from "../components/custom/HomeHero"
 import HomeNewsContainer from "../components/custom/HomeNewsContainer"
 import { sanityClient } from "../sanity"
 
-const Home = ({properties, news, cities, homeHero, discover}) => {
+const Home = ({properties, news, cities, homeHero, discover, banner}) => {
   // console.log(discover[0])
   return (
     <div>
+      <Header/>
       <section className="home_news">
         <HomeNewsContainer news={news && news[0]}/>
       </section>
@@ -15,6 +18,9 @@ const Home = ({properties, news, cities, homeHero, discover}) => {
       </section>
       <section className="discover">
         <Discover discover={ discover && discover[0]} />
+      </section>
+      <section className="home_bottom_banner">
+        <HomeBottomBanner banner={banner && banner[0]}/>
       </section>
     </div>
   )
@@ -36,6 +42,9 @@ export const getServerSideProps = async () => {
   const discoverQuery = '*[ _type == "discover"]'
   const discover = await sanityClient.fetch(discoverQuery)
 
+  const bannerQuery = '*[ _type == "homeBottomBanner"]'
+  const banner = await sanityClient.fetch(bannerQuery)
+
   if(!properties.length){
     return {
       props : {
@@ -43,13 +52,14 @@ export const getServerSideProps = async () => {
         news : [],
         cities : [],
         homeHero : [],
-        discover : []
+        discover : [],
+        banner : []
       }
     }
   }else{
     return{
       props : {
-        properties,news, cities, homeHero, discover
+        properties,news, cities, homeHero, discover, banner
       }
     }
   }

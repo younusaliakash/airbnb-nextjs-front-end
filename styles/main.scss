@@ -3,9 +3,13 @@
 @import "./abstracts/veriables";
 @import "./responsive/breakpoints";
 
+//common
+@import "./components/common/header";
+
 //components
 @import "./components/custom/homeNewsContainer";
 @import "./components/custom/homeHero";
 @import "./components/custom/discover";
+@import "./components/custom/homeBottomBanner";
 
 //pages

@@ -1,0 +1,52 @@
+.home_bottom_banner {
+  .banner_container {
+    .container_wrapper {
+      width: 100%;
+      position: relative;
+      .banner_image {
+        img {
+          width: 100%;
+        }
+      }
+      .banner_text {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        .text_wrapper {
+          width: 80%;
+          margin: 0 auto;
+          h1 {
+            max-width: 520px;
+            font-size: 74px;
+            line-height: 77px;
+            color: #fff;
+          }
+        }
+      }
+      .banner_btn {
+        position: absolute;
+        left: 0;
+        bottom: 80px;
+        width: 100%;
+        .btn_wrapper {
+          width: 80%;
+          margin: 0 auto;
+          button {
+            text-align: center;
+            outline: none;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            color: #222222;
+            background: #fff;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
