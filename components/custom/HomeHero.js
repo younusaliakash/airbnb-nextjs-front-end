@@ -4,7 +4,7 @@ import { urlFor } from "../../sanity";
 const HomeHero = ({ hero }) => {
   // console.log(hero);
   return (
-    <div className="home_hero_container">
+    <div className="home_hero_container container">
       <div className="container_wrapper">
         <div className="hero_image">
           <img src={urlFor(hero?.image)} alt="" />

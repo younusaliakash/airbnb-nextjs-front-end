@@ -6,7 +6,7 @@ const Discover = ({ discover }) => {
   return (
     <>
       {discover ? (
-        <div className="discover_container">
+        <div className="discover_container container">
           <div className="container_wrapper">
             <div className="container_title">
               <h1>Discover Airbnb Experiences</h1>

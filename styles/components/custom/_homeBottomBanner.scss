@@ -1,4 +1,11 @@
 .home_bottom_banner {
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: 2086px) {
+    width: 1800px !important;
+    margin: 0 auto;
+  }
+
   .banner_container {
     .container_wrapper {
       width: 100%;
@@ -14,7 +21,7 @@
         left: 0;
         width: 100%;
         .text_wrapper {
-          width: 80%;
+          width: 90%;
           margin: 0 auto;
           h1 {
             max-width: 520px;
@@ -30,7 +37,7 @@
         bottom: 80px;
         width: 100%;
         .btn_wrapper {
-          width: 80%;
+          width: 90%;
           margin: 0 auto;
           button {
             text-align: center;

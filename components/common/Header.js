@@ -1,13 +1,19 @@
+import Link from "next/link";
 import React, { useState } from "react";
+import { BiSearch } from "react-icons/bi";
+import { FaUserCircle } from "react-icons/fa";
+import { FiGlobe } from "react-icons/fi";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
   const [stickyNav, setStickyNav] = useState(false);
-  const [logoColor, setLogoColor] = useState(false)
+  const [logoColor, setLogoColor] = useState(false);
+  const [menuOption, setMenuOption] = useState(false);
 
   const stickyNavbar = () => {
     if (window.pageYOffset > 100) {
       setStickyNav(true);
-      setLogoColor(true)
+      setLogoColor(true);
     } else {
       setStickyNav(false);
       setLogoColor(false);
@@ -20,13 +26,13 @@ const Header = () => {
   }
 
   const handleClick = () => {
-      console.log("kaj hotsa")
-      setStickyNav(false)
-  }
+    console.log("kaj hotsa");
+    setStickyNav(false);
+  };
 
   return (
-    <div className="header">
-      <div className="header_wrapper">
+    <div className={`header ${stickyNav || logoColor ? "header_active" : ""}`}>
+      <div className="header_wrapper container">
         <div className="header_left">
           <div className="logo">
             <svg width="102" height="32" fill="none">
@@ -51,18 +57,102 @@ const Header = () => {
               </div>
             </div>
             <div className="search_input">
-              <input type="text" name="" id="" />
-              <button>search</button>
+              <div className="multi_search_container">
+                <div className="wrapper">
+                  <form>
+                    <div className="field one">
+                        <div className="field_wrapper">
+                            <p>Location</p>
+                            <input type="text" name="" id="" placeholder="Where are you going?" />
+                        </div>
+                    </div>
+                    <div className="field two">
+                      <div className="field_wrapper">
+                        <p>Check in</p>
+                        <input type="date" name="" id="" placeholder="Add date"/>
+                      </div>
+                    </div>
+                    <div className="field three">
+                      <div className="field_wrapper">
+                        <p>Check out</p>
+                        <input type="date" name="" id="" placeholder="Add date" />
+                      </div>
+                    </div>
+                    <div className="field four">
+                      <div className="field_wrapper">
+                        <p>Guest</p>
+                        <input type="text" name="" id="" placeholder="Add guest" />
+                      </div>
+                    </div>
+                        <button type="submit" className="field five">
+                            <BiSearch className="icon_svg" />
+                        </button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
           {stickyNav && (
-            <div className="search_active_btn">
-              <div className="btn_container" onClick={handleClick}>click me</div>
+            <div className="search_active_btn" onClick={handleClick}>
+              <p>Start your search</p>
+              <div className="icon">
+                <BiSearch className="icon_svg" />
+              </div>
             </div>
           )}
         </div>
         <div className="header_right">
-          <h1>menu</h1>
+          <p className={`icon_svg ${stickyNav ? "active" : ""}`}>
+            Became a host
+          </p>
+          <div className="icon">
+            <FiGlobe className={`icon_svg ${stickyNav ? "active" : ""}`} />
+          </div>
+          <div
+            className="menu_group"
+            onClick={() => setMenuOption(!menuOption)}
+          >
+            <div className="menu_btn">
+              <div className="icon">
+                <GiHamburgerMenu className="icon_svg" />
+              </div>
+              <div className="icon">
+                <FaUserCircle className="icon_svg" />
+              </div>
+            </div>
+            {menuOption && (
+              <div className="menu_options">
+                <ul>
+                  <li>
+                    <Link href="/">
+                      <p>Sign up</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/">
+                      <p>Log in</p>
+                    </Link>
+                  </li>
+                  <hr />
+                  <li>
+                    <Link href="/">
+                      <p>Host your home</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/">
+                      <p>Host an experience</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/">
+                      <p>Help</p>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

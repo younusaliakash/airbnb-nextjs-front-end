@@ -1,0 +1,55 @@
+.cities {
+  padding-bottom: 100px;
+  .cities_container {
+    h1 {
+      font-size: 33px;
+      font-weight: 600;
+      line-height: 37px;
+      color: #222222;
+      padding-bottom: 45px;
+    }
+    .container_wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      .city_card {
+        min-height: 372px;
+        border-radius: 10px;
+        background: #ff385c;
+        .card_wrapper {
+          .thumbnail {
+            img {
+              width: 100%;
+              border-top-right-radius: 10px;
+              border-top-left-radius: 10px;
+            }
+          }
+          .city_name_and_info {
+            padding: 20px;
+            h2 {
+              font-size: 27px;
+              line-height: 30px;
+              font-weight: 600;
+              color: #fff;
+            }
+            p {
+              margin-top: 10px;
+              font-size: 15px;
+              line-height: 20px;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .Rajshahi {
+        background: #bc1a6e;
+      }
+      .Chattogram {
+        background: #de3151;
+      }
+      .Rangpur {
+        background: #d93b30;
+      }
+    }
+  }
+}

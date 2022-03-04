@@ -1,4 +1,5 @@
 import Header from "../components/common/Header"
+import Cities from "../components/custom/cities"
 import Discover from "../components/custom/discover"
 import HomeBottomBanner from "../components/custom/HomeBottomBanner"
 import HomeHero from "../components/custom/HomeHero"
@@ -15,6 +16,9 @@ const Home = ({properties, news, cities, homeHero, discover, banner}) => {
       </section>
       <section className="home_hero">
         <HomeHero hero={homeHero && homeHero[0]} />
+      </section>
+      <section className="cities">
+        <Cities cities={cities}/>
       </section>
       <section className="discover">
         <Discover discover={ discover && discover[0]} />
@@ -33,7 +37,7 @@ export const getServerSideProps = async () => {
   const newsQuery = '*[ _type == "homeNews"]'
   const news = await sanityClient.fetch(newsQuery)
 
-  const citiesQuery = '*[ _type == "homeNews"]'
+  const citiesQuery = '*[ _type == "city"]'
   const cities = await sanityClient.fetch(citiesQuery)
 
   const homeHeroQuery = '*[ _type == "homeHero"]'

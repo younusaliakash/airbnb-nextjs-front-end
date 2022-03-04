@@ -7,7 +7,7 @@ const HomeNewsContainer = ({ news }) => {
   return (
     <>
       {news ? (
-        <div className="home_news_container">
+        <div className="home_news_container container">
           <div className="news_container">
             <h1 className="news_title">{news?.newsText}</h1>
             <a href={news?.pathName} target="_blank" rel="noopener noreferrer">
