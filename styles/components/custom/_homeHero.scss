@@ -9,6 +9,10 @@
         img {
           width: 100%;
           border-radius: 10px;
+          @include breakpoints(tablet) {
+            height: 550px;
+            object-fit: cover;
+          }
         }
       }
       .hero_information {
@@ -21,10 +25,15 @@
         justify-content: center;
         .info_wrapper {
           h1 {
+            text-align: center;
             color: #fff;
             font-size: 38px;
             line-height: 43px;
             font-weight: 600;
+            @include breakpoints(tablet) {
+              font-size: 30px;
+              line-height: 32px;
+            }
           }
           .btn_container {
             margin-top: 20px;

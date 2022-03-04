@@ -12,6 +12,12 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
+      @include breakpoints(smLaptop) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include breakpoints(smTablet) {
+        grid-template-columns: repeat(1, 1fr);
+      }
       .city_card {
         min-height: 372px;
         border-radius: 10px;

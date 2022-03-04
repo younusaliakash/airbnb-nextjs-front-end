@@ -3,7 +3,7 @@ import React from "react";
 import { urlFor } from "../../sanity";
 
 const Cities = ({ cities }) => {
-  console.log(cities);
+//   console.log(cities);
   return (
     <>
       {cities ? (
@@ -11,7 +11,7 @@ const Cities = ({ cities }) => {
             <h1>Inspiration for your next trip</h1>
           <div className="container_wrapper">
             {cities?.map((city, i) => (
-              <Link key={i} href="">
+              <Link key={i} href={`/city/${city?._id}`}>
                 <a>
                   <div className={`city_card ${city?.cityName}`}>
                     <div className="card_wrapper">

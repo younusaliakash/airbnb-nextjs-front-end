@@ -16,6 +16,9 @@
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 30px;
+          @include breakpoints(tablet) {
+            grid-template-columns: repeat(1, 1fr);
+          }
           .discover_card {
             .card_wrapper {
               width: 100%;
@@ -24,6 +27,10 @@
                 img {
                   border-radius: 10px;
                   width: 100%;
+                  @include breakpoints(tablet) {
+                    height: 420px;
+                    object-fit: cover;
+                  }
                 }
               }
               .discover_info {
@@ -31,11 +38,19 @@
                 top: 40px;
                 left: 35px;
                 width: 280px;
+                @include breakpoints(tablet) {
+                  width: auto;
+                  left: 22px;
+                }
                 h2 {
                   font-size: 41px;
                   line-height: 46px;
                   font-weight: 600;
                   color: #fff;
+                  //   @include breakpoints(tablet) {
+                  //     font-size: 25px;
+                  //     line-height: 35px;
+                  //   }
                 }
               }
               .btn_container {
@@ -52,6 +67,14 @@
                   line-height: 20px;
                   font-weight: 600;
                   cursor: pointer;
+                  @include breakpoints(tablet) {
+                    padding: 8px 16px;
+                    border-radius: 5px;
+                    background: #fff;
+                    color: #222222;
+                    font-size: 12px;
+                    line-height: 20px;
+                  }
                 }
               }
             }

@@ -15,6 +15,9 @@
     }
     .header_middle {
       position: relative;
+      @include breakpoints(smLaptop) {
+        display: none;
+      }
       .middle_menu {
         .multi_menu {
           min-width: 400px;

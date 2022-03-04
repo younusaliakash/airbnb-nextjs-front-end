@@ -13,6 +13,10 @@
       .banner_image {
         img {
           width: 100%;
+          @include breakpoints(tablet) {
+            height: 700px;
+            object-fit: cover;
+          }
         }
       }
       .banner_text {
@@ -28,6 +32,10 @@
             font-size: 74px;
             line-height: 77px;
             color: #fff;
+            @include breakpoints(tablet) {
+              font-size: 43px;
+              line-height: 45px;
+            }
           }
         }
       }

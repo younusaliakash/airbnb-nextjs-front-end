@@ -7,7 +7,7 @@ import HomeNewsContainer from "../components/custom/HomeNewsContainer"
 import { sanityClient } from "../sanity"
 
 const Home = ({properties, news, cities, homeHero, discover, banner}) => {
-  // console.log(discover[0])
+  // console.log(properties)
   return (
     <div>
       <Header/>

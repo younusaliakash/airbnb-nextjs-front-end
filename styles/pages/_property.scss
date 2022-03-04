@@ -1,0 +1,24 @@
+.properties_container {
+  padding-top: 100px;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    .property_grid {
+      .image {
+        img {
+          width: 100%;
+          height: 275px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+      .text {
+        .property_name {
+        }
+        .price {
+        }
+      }
+    }
+  }
+}

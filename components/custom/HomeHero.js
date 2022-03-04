@@ -12,7 +12,7 @@ const HomeHero = ({ hero }) => {
         <div className="hero_information">
           <div className="info_wrapper">
             <h1>{hero?.heroText}</h1>
-            <a href={hero?.pathName} target="_blank" rel="noopener noreferrer">
+            <a href={hero?.pathName}>
               <div className="btn_container">
                 <button>{hero?.buttonName}</button>
               </div>
